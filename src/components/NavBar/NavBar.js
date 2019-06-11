@@ -1,19 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
 
 import {
   darkBlue, gray00, yellow, above, below, elevation,
 } from '../../utilities';
 
-import { toggleDropdown } from '../../store/Navbar/actions';
-
 import Brand from './Brand';
 import BurgerMenu from './Burgermenu';
 
-const NavBar = ({ toggleDropdown }) => (
+const NavBar = () => (
   <NavBarWrapper>
     <NavBrand>
       <Brand />
@@ -25,27 +20,12 @@ const NavBar = ({ toggleDropdown }) => (
       <a to="/">Contacts</a>
     </NavLinks>
     <BurgerWrapper>
-      <div onClick={toggleDropdown}>
-        <BurgerMenu />
-      </div>
+      <BurgerMenu />
     </BurgerWrapper>
   </NavBarWrapper>
 );
 
-NavBar.propTypes = {
-  toggleDropdown: PropTypes.func.isRequired,
-};
-
-const mapStateToProps = state => ({
-  dropdownVisibility: state.navbar.dropdownVisibility,
-});
-
-const mapDispatchToProps = dispatch => bindActionCreators({ toggleDropdown }, dispatch);
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(NavBar);
+export default NavBar;
 
 const NavBarWrapper = styled.nav`
   position: fixed;
@@ -60,7 +40,7 @@ const NavBarWrapper = styled.nav`
   z-index: 2;
 
   ${below.med`
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 1fr 80px;
   `}
 `;
 

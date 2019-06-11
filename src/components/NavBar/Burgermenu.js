@@ -1,49 +1,38 @@
 import React from 'react';
-import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
 
 // Add Classname = "open"
+import { toggleDropdown } from '../../store/Navbar/actions';
 
-const Burgermenu = () => (
-  <Wrapper>
+import './Burgermenu.css';
+
+const Burgermenu = ({ toggleDropdown, dropdownVisibility }) => (
+  <div
+    id="burger-menu"
+    className={dropdownVisibility ? 'open' : null}
+    onClick={toggleDropdown}
+  >
     <div id="burger">
       <span>&nbsp;</span>
       <span>&nbsp;</span>
       <span>&nbsp;</span>
     </div>
-  </Wrapper>
+  </div>
 );
 
-export default Burgermenu;
+Burgermenu.propTypes = {
+  toggleDropdown: PropTypes.func.isRequired,
+};
 
-const Wrapper = styled.div`
-#burger {
-  cursor: pointer;
-  display: block;
-  padding-top: 7px;
-}
+const mapStateToProps = state => ({
+  dropdownVisibility: state.navbar.dropdownVisibility,
+});
 
-#burger span {
-  background: #eee;
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 7px;
-  position: relative;
-  transition: all ease-in-out 0.2s;
-}
+const mapDispatchToProps = dispatch => bindActionCreators({ toggleDropdown }, dispatch);
 
-#burger-menu.open span:nth-child(2) {
-  width: 0;
-  opacity: 0;
-}
-
-#burger-menu.open span:nth-child(3) {
-  transform: rotate(45deg);
-  top: -24px;
-}
-
-#burger-menu.open span:nth-child(1) {
-  transform: rotate(-45deg);
-  top: 24px;
-}
-`;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Burgermenu);
