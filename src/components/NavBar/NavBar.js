@@ -14,10 +14,10 @@ const NavBar = () => (
       <Brand />
     </NavBrand>
     <NavLinks>
-      <a to="/">Home</a>
-      <a to="/">About</a>
-      <a to="/">Projects</a>
-      <a to="/">Contacts</a>
+      <a href="/">Home</a>
+      <a href="/">About</a>
+      <a href="/">Projects</a>
+      <a href="/">Contacts</a>
     </NavLinks>
     <BurgerWrapper>
       <BurgerMenu />
@@ -62,6 +62,7 @@ const NavLinks = styled.ul`
     color: ${gray00};
     margin: 0 10px;
     transition: all 300ms linear 0s;
+    text-decoration: none;
     cursor: pointer;
 
     &:hover {

@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
 
-// Add Classname = "open"
 import { toggleDropdown } from '../../store/Navbar/actions';
 
 import './Burgermenu.css';
@@ -21,10 +19,6 @@ const Burgermenu = ({ toggleDropdown, dropdownVisibility }) => (
     </div>
   </div>
 );
-
-Burgermenu.propTypes = {
-  toggleDropdown: PropTypes.func.isRequired,
-};
 
 const mapStateToProps = state => ({
   dropdownVisibility: state.navbar.dropdownVisibility,

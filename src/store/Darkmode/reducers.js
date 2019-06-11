@@ -1,7 +1,7 @@
 import { TOGGLE_DARKMODE } from './actions';
 
 const initialState = {
-  darkmode: true,
+  darkmode: false,
 };
 
 export default function (state = initialState, action) {

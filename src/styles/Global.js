@@ -6,6 +6,11 @@ const GlobalStyles = createGlobalStyle`
 
   @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   html {
     box-sizing: border-box;
   }
@@ -16,9 +21,8 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     ${custom};
-    overflow-x: hidden;
-    overflow-y: hidden;
   }
-  `;
+
+`;
 
 export default GlobalStyles;

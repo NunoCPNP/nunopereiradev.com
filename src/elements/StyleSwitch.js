@@ -1,16 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
 
-// add classname "off"
 import { toggleDarkmode } from '../store/Darkmode/actions';
 
 import './StyleSwitch.css';
 
 const StyleSwitch = ({ toggleDarkmode, darkmode }) => (
   <div
-    className={darkmode ? 'bulb off' : 'bulb'}
+    className={darkmode ? 'bulb' : 'bulb off'}
     onClick={toggleDarkmode}
   >
     <svg width="32px" height="30px" viewBox="0 0 32 30">
