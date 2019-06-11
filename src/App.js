@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 
 import GlobalStyle from './styles/Global';
 import NavBar from './components/NavBar/NavBar';
+import StyleSwitch from './elements/StyleSwitch';
 
 import rootReducer from './store/rootReducer';
 
@@ -23,6 +24,7 @@ function App() {
     <>
       <Provider store={store}>
         <NavBar />
+        <StyleSwitch />
         <GlobalStyle />
       </Provider>
     </>
