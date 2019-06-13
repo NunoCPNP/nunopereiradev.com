@@ -12,12 +12,12 @@ const GlobalStyles = createGlobalStyle`
 
   *, *: before, *: after {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
   }
 
   body {
     ${custom};
-    margin: 0;
-    padding: 0;
   }
 `;
 

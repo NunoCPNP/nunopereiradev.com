@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { connect } from 'react-redux';
 
 import NavBar from '../components/NavBar/NavBar';
 import StyleSwitch from '../elements/StyleSwitch';
+import Collapsemenu from '../components/NavBar/Collapsemenu';
 
 import { gray00, gray75 } from '../utilities';
 
@@ -25,6 +25,7 @@ const Home = ({ darkmode }) => (
   <ThemeProvider theme={darkmode ? themeDark : themeLight}>
     <Wrapper>
       <NavBar />
+      <Collapsemenu />
       <StyleSwitch />
     </Wrapper>
   </ThemeProvider>
