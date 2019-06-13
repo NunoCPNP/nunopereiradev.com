@@ -36,11 +36,12 @@ const NavBarWrapper = styled.nav`
   grid-template-columns: 1fr 3fr;
   height: 60px;
   background: ${darkBlue};  
-  ${elevation[1]};
-  z-index: 2;
+  ${elevation[2]};
+  z-index: 1  ;
 
   ${below.med`
     grid-template-columns: 1fr 80px;
+    ${elevation[0]};
   `}
 `;
 
@@ -54,7 +55,7 @@ const NavBrand = styled.div`
 const NavLinks = styled.ul`
   justify-self: end;
   list-style-type: none;
-  margin-right: 100px;
+  margin-right: 30px;
   display:flex;
   align-items: center;
   

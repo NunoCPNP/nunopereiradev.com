@@ -5,24 +5,11 @@ import { connect } from 'react-redux';
 import NavBar from '../components/NavBar/NavBar';
 import StyleSwitch from '../elements/StyleSwitch';
 import Collapsemenu from '../components/NavBar/Collapsemenu';
+ 
+import { ThemeLight, ThemeDark } from '../themes';
 
-import { gray00, gray75 } from '../utilities';
-
-
-const themeLight = {
-  colors: {
-    primary: `${gray00}`,
-  },
-};
-
-const themeDark = {
-  colors: {
-    primary: `${gray75}`,
-  },
-};
-
-const Home = ({ darkmode }) => (
-  <ThemeProvider theme={darkmode ? themeDark : themeLight}>
+const SinglePageApp = ({ darkmode }) => (
+  <ThemeProvider theme={darkmode ? ThemeDark : ThemeLight}>
     <Wrapper>
       <NavBar />
       <Collapsemenu />
@@ -35,7 +22,7 @@ const mapStateToProps = state => ({
   darkmode: state.darkmode.darkmode,
 });
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(SinglePageApp);
 
 const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.primary};

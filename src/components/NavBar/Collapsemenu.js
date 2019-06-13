@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useSpring, animated } from 'react-spring';
 
@@ -33,6 +34,10 @@ const Collapsemenu = ({ dropdownVisibility }) => {
 const mapStateToProps = state => ({
   dropdownVisibility: state.navbar.dropdownVisibility,
 });
+
+Collapsemenu.propTypes = {
+  dropdownVisibility: PropTypes.bool.isRequired,
+};
 
 export default connect(mapStateToProps)(Collapsemenu);
 
