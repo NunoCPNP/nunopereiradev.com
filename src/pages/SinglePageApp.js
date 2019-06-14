@@ -5,14 +5,17 @@ import { connect } from 'react-redux';
 import NavBar from '../components/NavBar/NavBar';
 import StyleSwitch from '../elements/StyleSwitch';
 import Collapsemenu from '../components/NavBar/Collapsemenu';
- 
+import CalltoAction from '../components/CalltoAction/CalltoAction';
+
 import { ThemeLight, ThemeDark } from '../themes';
+
 
 const SinglePageApp = ({ darkmode }) => (
   <ThemeProvider theme={darkmode ? ThemeDark : ThemeLight}>
     <Wrapper>
       <NavBar />
       <Collapsemenu />
+      <CalltoAction />
       <StyleSwitch />
     </Wrapper>
   </ThemeProvider>
