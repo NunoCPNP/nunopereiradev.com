@@ -50,6 +50,10 @@ const NavBrand = styled.div`
   margin-left: 30px;
   display:flex;
   align-items: center;
+
+  ${below.med`
+    margin-left: 10px;
+  `}
 `;
 
 const NavLinks = styled.ul`

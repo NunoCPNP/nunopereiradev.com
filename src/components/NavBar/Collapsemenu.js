@@ -50,7 +50,7 @@ const CollapseWrapper = styled(animated.div)`
 const NavLinks = styled.ul`
   list-style-type: none;
   color: ${gray00};
-  padding: 10px 10px 10px 40px;
+  padding: 10px 10px 20px 15px;
   
   & li {
     transition: all 300ms linear 0s;
