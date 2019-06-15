@@ -17,5 +17,10 @@ const ImageWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: flex-end;
-  padding: 120px 0px;
+  padding-top: 120px;
+  padding-right: 60px;
+
+  & img {
+    
+  }
 `;
