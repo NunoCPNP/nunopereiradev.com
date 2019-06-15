@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import BYellow from '../../assets/Yellow_BG_0.png';
+import BYellow from '../../assets/yellow_asset.png';
+
+import { above, below } from '../../utilities';
 
 const Background = () => (
   <Wrapper>
