@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import BYellow from '../../assets/yellow_asset.png';
 
-import { above, below } from '../../utilities';
-
 const Background = () => (
   <Wrapper>
     <img src={BYellow} alt="" />
