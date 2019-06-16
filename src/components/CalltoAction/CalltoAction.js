@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Background from './Background';
-import CtaImage from './CtaImage';
+import ImageText from './ImageText';
 
 const CalltoAction = () => (
   <Wrapper>
     <Background />
-    <CtaImage />
+    <ImageText />
   </Wrapper>
 );
 

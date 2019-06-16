@@ -5,22 +5,23 @@ import cta from '../../assets/cta.png';
 
 import { above, below } from '../../utilities';
 
-const CtaImage = () => (
+const ImageText = () => (
   <ImageWrapper>
     <img src={cta} alt="" />
   </ImageWrapper>
 );
 
-export default CtaImage;
+export default ImageText;
 
 const ImageWrapper = styled.div`
   position: relative;
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 120px;
-  padding-right: 60px;
+  display: grid;
 
   & img {
-    
+    justify-self: end;
+    align-self: center;
+    padding-top: 110px;
+    padding-right: 50px;
+    width:100%
   }
 `;
