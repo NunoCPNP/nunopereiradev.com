@@ -23,7 +23,7 @@ const StyledLettering = styled.div`
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   align-self: center;
-  justify-self: center;
+  padding-left: 50px;
   padding-top: 90px;
 
   & h1 {

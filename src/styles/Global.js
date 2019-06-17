@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    overflow-y: hidden;
+    overflow-x: hidden;
   }
 
   *, *: before, *: after {

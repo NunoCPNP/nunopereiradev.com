@@ -89,16 +89,15 @@ class Contacts extends Component {
 export default Contacts;
 
 const ContactsWrapper = styled.div`
-  background-color: ${darkBlue};
   display: grid;
-  grid-template-columns: 50% 50%; 
+  grid-template-columns: 60% 40%; 
   grid-template-rows: auto;
-  color: white;
-  padding: 50px 30px;
+  padding: 50px 50px;
 `;
 
 const StyledTitle = styled.h2`
   padding-bottom: 30px;
+  color: ${props => props.theme.colors.secondary};
 
   & span {
     color: ${yellow};
@@ -109,13 +108,14 @@ const StyledTitle = styled.h2`
 
 const FormWrapper = styled.div`
   grid-row: 1, 2;
+  position: relative;
 
   & input {
     padding-left: 10px;
     border: none;
     outline: none;
     background: none;
-    color: white;
+    color: ${props => props.theme.colors.secondary};
     width: 80%;
     font-family: "Poppins", sans-serif;
   }
@@ -133,8 +133,8 @@ const FormWrapper = styled.div`
   & button {
     margin-top: 20px;
     background: none;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.secondary};
     cursor: pointer;
     width: 100%;
     transition: all 300ms linear 0s;
@@ -153,7 +153,7 @@ const StyledDiv = styled.div`
   padding: 5px 0;
   overflow: hidden;
   font-size: 20px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid ${props => props.theme.colors.secondary};
   color: ${yellow};
 `;
 

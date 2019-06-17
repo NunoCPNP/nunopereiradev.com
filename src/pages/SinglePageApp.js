@@ -34,6 +34,6 @@ export default connect(mapStateToProps)(SinglePageApp);
 const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.primary};
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   transition: 0.4s ease all;
 `;
