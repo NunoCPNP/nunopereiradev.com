@@ -3,7 +3,7 @@
   height: 48px;
   background: #f5f6f7;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
   margin: auto;

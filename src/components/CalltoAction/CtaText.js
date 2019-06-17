@@ -13,7 +13,7 @@ const CtaText = () => (
       <span> Nuno</span>
     </h1>
     <h1><span>Pereira</span></h1>
-    <h3>A Front End Developer</h3>
+    <h3>A Freelance Front End Developer</h3>
   </StyledLettering>
 );
 
@@ -24,25 +24,26 @@ const StyledLettering = styled.div`
   grid-row: 1 / 2;
   align-self: center;
   justify-self: center;
+  padding-top: 90px;
 
   & h1 {
-    font-size: 65px;
+    font-size: 75px;
     font-weight: 800;
-    color: ${darkBlue};
+    color: ${props => props.theme.colors.secondary};
   }
   & span {
-    font-size: 65px;
+    font-size: 75px;
     font-weight: 800;
     color: ${yellow};
   }
   & h3 {
-    margin-top:30px;
+    margin-top:35px;
     font-size: 30px;
     font-weight: 600;
-    color: ${darkBlue};
+    color: ${props => props.theme.colors.secondary};
   }
   & h4 {
-    font-size: 20px;
+    font-size: 25px;
     color: ${yellow};
   }
 `;
