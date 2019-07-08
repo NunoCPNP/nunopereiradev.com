@@ -1,10 +1,25 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-const About = () => (
-  <div>
-    ...
-  </div>
-);
+import { getData } from '../../store/Sanity/actions';
 
-export default About;
+const About = ({ getData }) => {
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <div>
+      ...
+    </div>
+  );
+};
+
+const mapStateToProps = state => ({
+  data: state.sanity.data,
+});
+
+const mapDispatchToProps = dispatch => bindActionCreators({ getData }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(About);

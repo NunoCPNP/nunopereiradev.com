@@ -6,7 +6,7 @@ import { toggleDarkmode } from '../store/Darkmode/actions';
 
 import './StyleSwitch.css';
 
-const StyleSwitch = ({ toggleDarkmode, darkmode }) => (
+const StyleSwitch = ({ toggleDarkmode, darkmode, getData }) => (
   <div
     className={darkmode ? 'bulb' : 'bulb off'}
     onClick={toggleDarkmode}
