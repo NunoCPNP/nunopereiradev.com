@@ -6,6 +6,8 @@ import NavBar from '../components/NavBar/NavBar';
 import StyleSwitch from '../elements/StyleSwitch';
 import Collapsemenu from '../components/NavBar/Collapsemenu';
 import CalltoAction from '../components/CalltoAction/CalltoAction';
+import About from '../components/About/About';
+import Contacts from '../components/Contacts/Contacts';
 
 import { ThemeLight, ThemeDark } from '../themes';
 
@@ -16,6 +18,8 @@ const SinglePageApp = ({ darkmode }) => (
       <NavBar />
       <Collapsemenu />
       <CalltoAction />
+      <About />
+      <Contacts />
       <StyleSwitch />
     </Wrapper>
   </ThemeProvider>
@@ -30,6 +34,6 @@ export default connect(mapStateToProps)(SinglePageApp);
 const Wrapper = styled.div`
   background-color: ${props => props.theme.colors.primary};
   width: 100vw;
-  height: 100vh;
-  transition: 0.3s ease all;
+  height: 100%;
+  transition: 0.4s ease all;
 `;

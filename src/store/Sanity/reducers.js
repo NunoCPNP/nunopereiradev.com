@@ -1,16 +1,16 @@
-import { TOGGLE_DARKMODE } from './actions';
+import { GET_DATA } from './actions';
 
 const initialState = {
-  darkmode: true,
+  data: [],
 };
 
 export default function (state = initialState, action) {
-  const { type } = action;
+  const { type, data } = action;
   switch (type) {
-    case TOGGLE_DARKMODE:
+    case GET_DATA:
       return {
         ...state,
-        darkmode: !state.darkmode,
+        data,
       };
     default:
       return state;
