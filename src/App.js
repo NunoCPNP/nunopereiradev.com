@@ -6,7 +6,7 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
 import GlobalStyle from './styles/Global';
-import SinglePageApp from './pages/SinglePageApp';
+import HomePage from './pages/HomePage';
 
 import rootReducer from './store/rootReducer';
 
@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Provider store={store}>
-        <SinglePageApp />
+        <HomePage />
       </Provider>
       <GlobalStyle />
     </>

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import firebaseConf from './Firebase';
 
+import ContactText from './ContactText';
+
 import { darkBlue, yellow } from '../../utilities';
 
 class Contacts extends Component {
@@ -80,6 +82,7 @@ class Contacts extends Component {
               {!this.state.alert && <button type='submit'>Send</button>}
             </form >
           </FormWrapper>
+          <ContactText />
         </ContactsWrapper>
       </>
     );
@@ -90,9 +93,9 @@ export default Contacts;
 
 const ContactsWrapper = styled.div`
   display: grid;
-  grid-template-columns: 60% 40%; 
-  grid-template-rows: auto;
-  padding: 50px 50px;
+  grid-template-columns: 50% 50%; 
+  grid-template-rows: 50vh;
+  padding: 50px;
 `;
 
 const StyledTitle = styled.h2`
@@ -108,7 +111,7 @@ const StyledTitle = styled.h2`
 
 const FormWrapper = styled.div`
   grid-row: 1, 2;
-  position: relative;
+  align-self: center;
 
   & input {
     padding-left: 10px;

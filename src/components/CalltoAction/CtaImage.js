@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import cta from '../../assets/cta.png';
 
-import { above, below } from '../../utilities';
-
 const CtaImage = () => (
   <ImageWrapper>
     <img src={cta} alt="" />

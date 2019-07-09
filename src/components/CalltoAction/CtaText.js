@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {
-  yellow, darkBlue, above, below,
+  yellow,
 } from '../../utilities';
 
 const CtaText = () => (
@@ -13,7 +13,7 @@ const CtaText = () => (
       <span> Nuno</span>
     </h1>
     <h1><span>Pereira</span></h1>
-    <h3>A Freelance Front End Developer</h3>
+    <h3>A Front-End Developer</h3>
   </StyledLettering>
 );
 
@@ -23,7 +23,7 @@ const StyledLettering = styled.div`
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   align-self: center;
-  padding-left: 50px;
+  justify-self: center;
   padding-top: 90px;
 
   & h1 {
@@ -38,12 +38,12 @@ const StyledLettering = styled.div`
   }
   & h3 {
     margin-top:35px;
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 32px;
+    font-weight: 700;
     color: ${props => props.theme.colors.secondary};
   }
   & h4 {
-    font-size: 25px;
+    font-size: 28px;
     color: ${yellow};
   }
 `;

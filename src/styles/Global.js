@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   *, *: before, *: after {

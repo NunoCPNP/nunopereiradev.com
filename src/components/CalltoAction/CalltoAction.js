@@ -4,17 +4,18 @@ import styled from 'styled-components';
 import Background from './Background';
 import CtaImage from './CtaImage';
 
-import { above, below } from '../../utilities';
 import CtaText from './CtaText';
 
 const CalltoAction = () => (
-  <Wrapper>
-    <Background />
-    <Grid>
-      <CtaImage />
-      <CtaText />
-    </Grid>
-  </Wrapper>
+  <div id="Home">
+    <Wrapper>
+      <Background />
+      <Grid>
+        <CtaImage />
+        <CtaText />
+      </Grid>
+    </Wrapper>
+  </div>
 );
 
 export default CalltoAction;
@@ -27,5 +28,5 @@ const Grid = styled.div`
   position: relative;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: calc(100vh - 60px);
 `;

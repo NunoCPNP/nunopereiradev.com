@@ -14,10 +14,10 @@ const NavBar = () => (
       <Brand />
     </NavBrand>
     <NavLinks>
-      <a href="/">Home</a>
-      <a href="/">About</a>
-      <a href="/">Projects</a>
-      <a href="/">Contacts</a>
+      <a href="#Home">Home</a>
+      <a href="#About">About</a>
+      <a href="#Projects">Projects</a>
+      <a href="#Contacts">Contacts</a>
     </NavLinks>
     <BurgerWrapper>
       <BurgerMenu />
@@ -31,15 +31,15 @@ const NavBarWrapper = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: 60px;
   background: ${darkBlue};  
   ${elevation[2]};
-  z-index: 1  ;
+  z-index: 1;
 
-  ${below.med`
+  ${below.m`
     grid-template-columns: 1fr 80px;
     ${elevation[0]};
   `}
@@ -51,7 +51,7 @@ const NavBrand = styled.div`
   display:flex;
   align-items: center;
 
-  ${below.med`
+  ${below.m`
     margin-left: 10px;
   `}
 `;
@@ -75,7 +75,7 @@ const NavLinks = styled.ul`
     }
   }
 
-  ${below.med`
+  ${below.m`
     display: none;
   `}
 `;
@@ -85,7 +85,7 @@ const BurgerWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  ${above.med`
+  ${above.m`
     display: none;
   `}
 `;

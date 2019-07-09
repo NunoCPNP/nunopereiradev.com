@@ -9,6 +9,8 @@ export const gray90 = '#0a0a23';
 
 export const darkBlue = '#262533';
 export const yellow = '#f9cc41';
+export const lightYellow = 'rgba(249,204,65,0.1)';
+export const lightBlue = 'rgba(38, 37, 51, 0.05)';
 
 export default {
   gray00,
@@ -21,4 +23,6 @@ export default {
   gray90,
   darkBlue,
   yellow,
+  lightYellow,
+  lightBlue,
 };

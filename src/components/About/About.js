@@ -1,25 +1,20 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React from 'react';
+import styled from 'styled-components';
 
-import { getData } from '../../store/Sanity/actions';
+import AboutText from './AboutText';
 
-const About = ({ getData }) => {
-  useEffect(() => {
-    getData();
-  }, []);
+const About = () => (
+  <div id="About">
+    <Grid>
+      <AboutText />
+    </Grid>
+  </div>
+);
 
-  return (
-    <div>
-      ...
-    </div>
-  );
-};
+export default About;
 
-const mapStateToProps = state => ({
-  data: state.sanity.data,
-});
-
-const mapDispatchToProps = dispatch => bindActionCreators({ getData }, dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(About);
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: calc(100vh - 60px);
+`;
