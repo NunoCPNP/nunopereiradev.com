@@ -1,3 +1,4 @@
+/* eslint func-names: 0 */
 const API_URL = 'https://6s8z0yay.api.sanity.io/';
 const API_QUERY = '[0]';
 
@@ -8,7 +9,6 @@ export function getData() {
     const res = await fetch(
       `${API_URL}v1/data/query/production?query=*${API_QUERY}`,
     );
-    console.log(res);
     const data = await res.json();
     return dispatch({
       type: 'GET_DATA',
