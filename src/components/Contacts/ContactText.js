@@ -5,7 +5,9 @@ import { yellow } from '../../utilities';
 
 const ContactText = () => (
   <Grid>
-    <h3>Hi There</h3>
+    <h3>
+      <span>Hi There</span>
+    </h3>
     <h3>Before you leave</h3>
     <Spacer />
     <h2>
@@ -20,7 +22,9 @@ const ContactText = () => (
     </h2>
     <Spacer />
     <h3>Thank You</h3>
-    <h3>Nuno</h3>
+    <h3>
+      <span>Nuno</span>
+    </h3>
   </Grid>
 );
 

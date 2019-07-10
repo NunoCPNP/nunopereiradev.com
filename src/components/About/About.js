@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 import AboutText from './AboutText';
+import Toolbox from './Toolbox';
 
 const About = () => (
   <div id="About">
     <Grid>
       <AboutText />
+      <Toolbox />
     </Grid>
   </div>
 );

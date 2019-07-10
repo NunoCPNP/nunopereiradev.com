@@ -49,7 +49,7 @@ class Contacts extends Component {
 
   render() {
     return (
-      <>  
+      <div id="Contacts">  
         <ContactsWrapper>
           <FormWrapper>
             <StyledTitle>Have a
@@ -84,7 +84,7 @@ class Contacts extends Component {
           </FormWrapper>
           <ContactText />
         </ContactsWrapper>
-      </>
+      </div>
     );
   }
 }
