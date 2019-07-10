@@ -1,6 +1,6 @@
 /* eslint func-names: 0 */
 const API_URL = 'https://6s8z0yay.api.sanity.io/';
-const API_QUERY = '[0]';
+const API_QUERY = '[]';
 
 export const GET_DATA = 'GET_DATA';
 

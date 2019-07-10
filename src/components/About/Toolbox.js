@@ -28,21 +28,19 @@ const Grid = styled.div`
   grid-column: 2 / 3;
   justify-self: center;
   align-self: center;
-
-  
 `;
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: repeat(3, 1fr);
+  grid-auto-rows: repeat(6, 1fr);
 
   & img {
     width: 250px;
     justify-self: center;
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
   }
 
   & h2 {
