@@ -15,15 +15,15 @@ class Projects extends Component {
     const { data } = this.props;
     return (
       <div>
-        {data.map(project => (
-          <>
+        {/* {data.map(project => (
+          <div key={project._id}>
             <h4 style={{ color: 'white' }}>{project.title}</h4>
-            <img src="" alt="" />
-            <h5>Fix Description on Sanity</h5>
+            <img src={project.cover.asset._ref} alt="" />
+            <h5>{project.description}</h5>
             <h6>{project.githubUrl}</h6>
             <h6>{project.projectUrl}</h6>
-          </>
-        ))}
+          </div>
+        ))} */}
       </div>
     );
   }
