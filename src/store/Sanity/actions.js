@@ -1,14 +1,15 @@
 /* eslint func-names: 0 */
 const API_URL = 'https://6s8z0yay.apicdn.sanity.io/';
 const API_QUERY = `*[ _type == "projects" ]{
+                    "id" : _id,
                     title,
                     description,
+                    githubUrl,
+                    projectUrl,
                     "imageUrl" : cover.asset->url
                     }`;
 
 const TRSLT_QUERY = encodeURIComponent(API_QUERY);
-
-console.log(TRSLT_QUERY);
 
 export const GET_DATA = 'GET_DATA';
 

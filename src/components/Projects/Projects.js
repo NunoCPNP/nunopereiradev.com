@@ -1,5 +1,6 @@
 /* eslint no-shadow: 0 */
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -14,16 +15,19 @@ class Projects extends Component {
   render() {
     const { data } = this.props;
     return (
-      <div>
-        {/* {data.map(project => (
-          <div key={project._id}>
-            <h4 style={{ color: 'white' }}>{project.title}</h4>
-            <img src={project.cover.asset._ref} alt="" />
-            <h5>{project.description}</h5>
-            <h6>{project.githubUrl}</h6>
-            <h6>{project.projectUrl}</h6>
-          </div>
-        ))} */}
+      <div id="Projects">
+        <h2>Projects</h2>
+        <Grid>
+          {data.map(project => (
+            <div key={project.id}>
+              <h4 style={{ color: 'white' }}>{project.title}</h4>
+              <img src={project.imageUrl} alt="" />
+              <h5>{project.description}</h5>
+              <h6>{project.githubUrl}</h6>
+              <h6>{project.projectUrl}</h6>
+            </div>
+          ))}
+        </Grid>
       </div>
     );
   }
@@ -36,3 +40,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => bindActionCreators({ getData }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);
+
+const Grid = styled.div`
+
+`;
