@@ -8,5 +8,5 @@ export const Card = styled.div`
   padding: 25px 20px;
   margin-right: 20px;
   border-radius: 20px;
-  ${elevation[2]}
+  /* ${elevation[2]}; */
 `;

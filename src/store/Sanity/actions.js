@@ -1,5 +1,5 @@
 /* eslint func-names: 0 */
-const API_URL = 'https://6s8z0yay.apicdn.sanity.io/';
+const API_URL = process.env.REACT_APP_API_URL;
 const API_QUERY = `*[ _type == "projects" ]{
                     "id" : _id,
                     title,
