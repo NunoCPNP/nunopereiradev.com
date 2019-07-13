@@ -8,6 +8,7 @@ const CtaImage = () => {
   const fade = useSpring({
     from: { opacity: 0 },
     opacity: 1,
+    delay: 800,
   });
 
   return (

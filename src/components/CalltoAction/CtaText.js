@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated, config } from 'react-spring';
 
 import {
   yellow,
@@ -8,8 +8,10 @@ import {
 
 const CtaText = () => {
   const animation = useSpring({
-    from: { transform: 'translate3d(-400px, 0, 0)' },
+    from: { transform: 'translate3d(-600px, 0, 0)' },
     transform: 'translate3d(0, 0, 0)',
+    config: config.stiff,
+    delay: 1200,
   });
 
   return (

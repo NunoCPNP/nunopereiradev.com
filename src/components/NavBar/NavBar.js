@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSpring, animated, config } from 'react-spring';
 
 import {
   darkBlue, gray00, yellow, above, below, elevation,
@@ -8,22 +9,31 @@ import {
 import Brand from './Brand';
 import BurgerMenu from './Burgermenu';
 
-const NavBar = () => (
-  <NavBarWrapper>
-    <NavBrand>
-      <Brand />
-    </NavBrand>
-    <NavLinks>
-      <a href="#Home">Home</a>
-      <a href="#About">About</a>
-      <a href="#Projects">Projects</a>
-      <a href="#Contacts">Contacts</a>
-    </NavLinks>
-    <BurgerWrapper>
-      <BurgerMenu />
-    </BurgerWrapper>
-  </NavBarWrapper>
-);
+const NavBar = () => {
+  const animation = useSpring({
+    from: { transform: 'translate3d(0, 30px, 0)', opacity: 0 },
+    to: { transform: 'translate3d(0, 0, 0)', opacity: 1 },
+    delay: 1600,
+    config: config.wobbly,
+  });
+
+  return (
+    <NavBarWrapper>
+      <NavBrand>
+        <Brand />
+      </NavBrand>
+      <NavLinks style={animation}>
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contacts">Contacts</a>
+      </NavLinks>
+      <BurgerWrapper>
+        <BurgerMenu />
+      </BurgerWrapper>
+    </NavBarWrapper>
+  );
+};
 
 export default NavBar;
 
@@ -56,7 +66,7 @@ const NavBrand = styled.div`
   `}
 `;
 
-const NavLinks = styled.ul`
+const NavLinks = styled(animated.ul)`
   justify-self: end;
   list-style-type: none;
   margin-right: 30px;
