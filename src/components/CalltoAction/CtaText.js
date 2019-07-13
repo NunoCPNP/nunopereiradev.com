@@ -1,25 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSpring, animated } from 'react-spring';
 
 import {
   yellow,
 } from '../../utilities';
 
-const CtaText = () => (
-  <StyledLettering>
-    <h4>Hello</h4>
-    <h1>
-    I'm
-      <span> Nuno</span>
-    </h1>
-    <h1><span>Pereira</span></h1>
-    <h3>A Front-End Developer</h3>
-  </StyledLettering>
-);
+const CtaText = () => {
+  const animation = useSpring({
+    from: { transform: 'translate3d(-400px, 0, 0)' },
+    transform: 'translate3d(0, 0, 0)',
+  });
+
+  return (
+    <StyledLettering style={animation}>
+      <h4>Hello</h4>
+      <h1>
+      I'm
+        <span> Nuno</span>
+      </h1>
+      <h1><span>Pereira</span></h1>
+      <h3>A Front-End Developer</h3>
+    </StyledLettering>
+  );
+};
 
 export default CtaText;
 
-const StyledLettering = styled.div`
+const StyledLettering = styled(animated.div)`
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   align-self: center;
