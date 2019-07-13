@@ -17,6 +17,6 @@ export default About;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 65% 35%;
   grid-template-rows: calc(100vh - 60px);
 `;

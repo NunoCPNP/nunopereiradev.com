@@ -8,6 +8,8 @@ import Project from './Project';
 
 import { getData } from '../../store/Sanity/actions';
 
+import { yellow } from '../../utilities';
+
 class Projects extends Component {
   componentDidMount() {
     const { getData } = this.props;
@@ -17,12 +19,16 @@ class Projects extends Component {
   render() {
     const { data } = this.props;
     return (
-      <div id="Projects">
-        <h2>Projects</h2>
+      <Wrapper id="Projects">
+        <h2>
+          Some of the latest
+          <span> Projects </span>
+          I have been working on
+        </h2>
         <Grid>
           {data.map(project => (
             <Project
-              key={project.id}
+              id={project.id}
               title={project.title}
               img={project.imageUrl}
               description={project.description}
@@ -31,7 +37,7 @@ class Projects extends Component {
             />
           ))}
         </Grid>
-      </div>
+      </Wrapper>
     );
   }
 }
@@ -43,6 +49,23 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => bindActionCreators({ getData }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);
+
+const Wrapper = styled.div`
+  height: calc(100vh - 60px);
+  align-content: center;
+
+  & h2 {
+    color: ${props => props.theme.colors.secondary};
+    padding: 110px 0px 50px 50px;
+  }
+
+  & span {
+    color: ${yellow};
+    font-weight: 800;
+    font-size: 33px;
+    padding: 0 5px;
+  }
+`;
 
 const Grid = styled.div`
   display: grid;

@@ -10,24 +10,24 @@ const AboutText = () => (
   <Wrapper>
     <h2>
     I don't Like to define myself by the
-      <span> work I've done </span>
+      <span> work I have done </span>
     . I define myself by the
       <span> work I want to do </span>
-    . Skills can be thought, personality is inherent. I prefer to
+    . Skills can be taught, personality is inherent. I prefer to
       <span> keep learning </span>
-    , continue
-      <span> challenging </span>
-    myself, and do interesting things that matter.
+    , to continue
+      <span> challenge </span>
+    myself, and to do interesting things that are meaningful.
     </h2>
     <SubGrid>
       <h2>
-      I love develop
+      I love to develop
         <span> digital products </span>
       that are :
       </h2>
       <AboutCard>
         <h2>Fast</h2>
-        <h4>Fast load times and lag free interaction, my highest priority</h4>
+        <h4>Fast load times and lag free interaction are my highest priority</h4>
       </AboutCard>
       <AboutCard>
         <h2>Responsive</h2>
@@ -60,7 +60,7 @@ const Wrapper = styled.div`
 
   & span {
     color: ${yellow};
-    font-weight: 900;
+    font-weight: 800;
     font-size: 33px;
     padding: 0 5px;
   }
@@ -69,7 +69,7 @@ const Wrapper = styled.div`
 const SubGrid = styled.div`
   padding-top: 70px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 100px 2fr;
 
   & h2 {

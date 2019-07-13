@@ -11,13 +11,13 @@ const ContactText = () => (
     <h3>Before you leave</h3>
     <Spacer />
     <h2>
-      I want you to remember that at present, I am also open to
+      I want you to remember that presently, I am open to
       <span> full time on-site </span>
       job offers in
       <span> London or Portugal </span>
     </h2>
     <h2>
-      If you feel that you want me on your team, drop me a message at
+      I can be a great addition to your team so drop me a message at
       <span> hello@nunopereiradev.com </span>
     </h2>
     <Spacer />
