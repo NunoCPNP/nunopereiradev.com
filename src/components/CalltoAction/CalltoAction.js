@@ -8,21 +8,15 @@ import CtaText from './CtaText';
 
 const CalltoAction = () => (
   <div id="Home">
-    <Wrapper>
-      <Background />
-      <Grid>
-        <CtaImage />
-        <CtaText />
-      </Grid>
-    </Wrapper>
+    <Background />
+    <Grid>
+      <CtaImage />
+      <CtaText />
+    </Grid>
   </div>
 );
 
 export default CalltoAction;
-
-const Wrapper = styled.div`
-  position: relative;
-`;
 
 const Grid = styled.div`
   position: relative;

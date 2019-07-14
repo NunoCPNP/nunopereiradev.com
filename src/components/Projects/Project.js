@@ -12,7 +12,7 @@ class Project extends PureComponent {
     return (
       <Wrapper key={id}>
         <h4>{title}</h4>
-        <img src={img} alt="" />
+        <img src={img} alt="Project Cover" />
         <h5>{description}</h5>
         <BtnWrapper>
           <a href={githubUrl}>GitHub</a>

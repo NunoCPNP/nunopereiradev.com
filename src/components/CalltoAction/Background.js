@@ -12,9 +12,7 @@ const Background = () => {
 
   return (
     <Wrapper style={animation}>
-      <Grid>
-        <img src={BYellow} alt="" />
-      </Grid>
+      <img src={BYellow} alt="" />
     </Wrapper>
   );
 };
@@ -25,15 +23,8 @@ const Wrapper = styled(animated.div)`
   position: absolute;
   top: 0;
   right: 0;
-`;
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 10% 90%;
-  grid-template-rows: 100%;
 
   & img {
-    grid-column: 2 / 3;
-    width: 100%;
+    width: 970px;
   }
 `;
