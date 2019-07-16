@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
 
 import {
-  yellow,
+  yellow, below,
 } from '../../utilities';
 
 const CtaText = () => {
@@ -56,4 +56,8 @@ const StyledLettering = styled(animated.div)`
     font-size: 28px;
     color: ${yellow};
   }
+
+  ${below.xxl`
+    padding-top: 50px;
+  `}
 `;

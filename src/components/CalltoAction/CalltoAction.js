@@ -6,6 +6,8 @@ import CtaImage from './CtaImage';
 
 import CtaText from './CtaText';
 
+import { below } from '../../utilities';
+
 const CalltoAction = () => (
   <div id="Home">
     <Background />
@@ -23,4 +25,8 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: calc(100vh - 60px);
+
+  ${below.xxl`
+    grid-template-rows: 100vh;
+  `}
 `;

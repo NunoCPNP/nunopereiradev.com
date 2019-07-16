@@ -4,6 +4,8 @@ import { useSpring, animated } from 'react-spring';
 
 import BYellow from '../../assets/yellow_asset.png';
 
+import { below } from '../../utilities';
+
 const Background = () => {
   const animation = useSpring({
     from: { transform: 'translate3d(800px, 0, 0)' },
@@ -26,5 +28,9 @@ const Wrapper = styled(animated.div)`
 
   & img {
     width: 970px;
+
+  ${below.xxl`
+    width: 750px;
+  `}
   }
 `;

@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import styled from 'styled-components';
+import { Waypoint } from 'react-waypoint';
 
-import { yellow } from '../../utilities';
+import { yellow, below } from '../../utilities';
 
 import { Card } from '../../elements';
 
@@ -48,7 +49,6 @@ const AboutText = () => (
 export default AboutText;
 
 const Wrapper = styled.div`
-  position: relative;
   grid-column: 1 / 2;
   align-self: center;
   padding: 50px;
@@ -64,6 +64,12 @@ const Wrapper = styled.div`
     font-size: 33px;
     padding: 0 5px;
   }
+
+  ${below.xxl`
+    & h2 {
+      line-height: 3rem;
+    }
+  `}
 `;
 
 const SubGrid = styled.div`
@@ -71,11 +77,17 @@ const SubGrid = styled.div`
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 100px 2fr;
+  grid-column-gap: 10px;
 
   & h2 {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
   }
+
+  ${below.xxl`
+    padding-top: 40px;
+    grid-template-rows: 70px 2fr;
+  `}
 `;
 
 const AboutCard = styled(Card)`
@@ -87,7 +99,7 @@ const AboutCard = styled(Card)`
   }
 
   & h4 {
-    text-align: justify;
+    text-align: center;
     padding-top: 10px;
     color: ${props => props.theme.colors.secondary};
   }

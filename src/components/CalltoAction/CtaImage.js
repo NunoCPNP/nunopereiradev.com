@@ -4,6 +4,8 @@ import { useSpring, animated } from 'react-spring';
 
 import cta from '../../assets/cta.png';
 
+import { below } from '../../utilities';
+
 const CtaImage = () => {
   const fade = useSpring({
     from: { opacity: 0 },
@@ -30,5 +32,10 @@ const ImageWrapper = styled(animated.div)`
     padding-top: 120px;
     width: 100%;
     height: auto;
+
+    ${below.xxl`
+      width: 95%;
+      padding-bottom: 50px;
+    `}
   }
 `;
