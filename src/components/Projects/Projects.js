@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Project from './Project';
+import Header from './Header';
 
 import { getData } from '../../store/Sanity/actions';
 
@@ -20,11 +21,7 @@ class Projects extends Component {
     const { data } = this.props;
     return (
       <Wrapper id="Projects">
-        <h2>
-          Some of the latest
-          <span> Projects </span>
-          I have been working on
-        </h2>
+        <Header />
         <Grid>
           {data.map(project => (
             <Project

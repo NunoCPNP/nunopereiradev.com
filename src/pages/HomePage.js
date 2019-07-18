@@ -8,7 +8,7 @@ import Collapsemenu from '../components/NavBar/Collapsemenu';
 import CalltoAction from '../components/CalltoAction/CalltoAction';
 import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
-import Contacts from '../components/Contacts/Contacts';
+import AnimatedWrapper from '../components/Contacts/AnimatedWrapper';
 
 import { ThemeLight, ThemeDark } from '../themes';
 
@@ -20,7 +20,7 @@ const HomePage = ({ darkmode }) => (
       <CalltoAction />
       <About />
       <Projects />
-      <Contacts />
+      <AnimatedWrapper />
       <StyleSwitch />
     </Wrapper>
   </ThemeProvider>
