@@ -25,7 +25,7 @@ class Projects extends Component {
         <Grid>
           {data.map(project => (
             <Project
-              id={project.id}
+              key={project.id}
               title={project.title}
               img={project.imageUrl}
               description={project.description}
