@@ -1,31 +1,43 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useSpring, animated, config } from 'react-spring';
+import { Waypoint } from 'react-waypoint';
 
 import { yellow, darkBlue } from '../../utilities';
 
-class Project extends PureComponent {
-  render() {
-    const {
-      id, title, img, description, githubUrl, projectUrl,
-    } = this.props;
+const Project = (props) => {
+  const [first, toggleFirst] = useState(false);
 
-    return (
-      <Wrapper key={id}>
-        <h4>{title}</h4>
-        <img src={img} alt="Project Cover" />
-        <h5>{description}</h5>
-        <BtnWrapper>
-          <a href={githubUrl}>GitHub</a>
-          <a href={projectUrl}>Live</a>
-        </BtnWrapper>
-      </Wrapper>
-    );
-  }
-}
+  const firstAnimation = useSpring({
+    opacity: first ? 1 : 0,
+    transform: first ? 'translate3d(0, 0, 0)' : 'translate3d(0, 200px, 0)',
+    config: config.molasses,
+  });
+
+  const {
+    id, title, img, description, githubUrl, projectUrl,
+  } = props;
+
+  return (
+    <Wrapper key={id} style={firstAnimation}>
+      <Waypoint
+        bottomOffset="20%"
+        onEnter={() => { if (!first) toggleFirst(true); }}
+      />
+      <h4>{title}</h4>
+      <img src={img} alt="Project Cover" />
+      <h5>{description}</h5>
+      <BtnWrapper>
+        <a href={githubUrl}>GitHub</a>
+        <a href={projectUrl}>Live</a>
+      </BtnWrapper>
+    </Wrapper>
+  );
+};
 
 export default Project;
 
-const Wrapper = styled.div`
+const Wrapper = styled(animated.div)`
   color: ${props => props.theme.colors.secondary};
 
   & h4 {

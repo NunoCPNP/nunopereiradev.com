@@ -23,11 +23,17 @@ const AboutText = () => {
     config: config.slow,
   });
 
+  const thirdAnimation = useSpring({
+    opacity: first ? 1 : 0,
+    transform: first ? 'translate3d(0, 0, 0)' : 'translate3d(0, 200px, 0)',
+    config: config.molasses,
+  });
+
   return (
     <Wrapper>
       <animated.div style={firstAnimation}>
         <Waypoint
-          bottomOffset="30%"
+          bottomOffset="50%"
           onEnter={() => { if (!first) toggleFirst(true); }}
         />
         <h2>
@@ -42,12 +48,14 @@ const AboutText = () => {
         myself, and to do interesting things that are meaningful.
         </h2>
       </animated.div>
-      <SubGrid>
+      <SubHeader>
         <animated.h2 style={secondAnimation}>
           I love to develop
           <span> digital products </span>
           that are :
         </animated.h2>
+      </SubHeader>
+      <SubGrid style={thirdAnimation}>
         <AboutCard>
           <h2>Fast</h2>
           <h4>Fast load times and lag free interaction are my highest priority</h4>
@@ -95,11 +103,15 @@ const Wrapper = styled.div`
   `}
 `;
 
-const SubGrid = styled.div`
+const SubHeader = styled.div`
+  padding-top: 50px;
+`;
+
+const SubGrid = styled(animated.div)`
   padding-top: 70px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 100px 2fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 10px;
 
   & h2 {
@@ -109,7 +121,7 @@ const SubGrid = styled.div`
 
   ${below.xxl`
     padding-top: 40px;
-    grid-template-rows: 70px 2fr;
+    grid-template-rows: 1fr;
   `}
 `;
 
