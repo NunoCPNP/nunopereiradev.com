@@ -15,11 +15,11 @@ const Project = (props) => {
   });
 
   const {
-    id, title, img, description, githubUrl, projectUrl,
+    title, img, description, githubUrl, projectUrl,
   } = props;
 
   return (
-    <Wrapper key={id} style={firstAnimation}>
+    <Wrapper style={firstAnimation}>
       <Waypoint
         bottomOffset="20%"
         onEnter={() => { if (!first) toggleFirst(true); }}
