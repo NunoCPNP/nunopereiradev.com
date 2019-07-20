@@ -9,8 +9,6 @@ import Header from './Header';
 
 import { getData } from '../../store/Sanity/actions';
 
-import { yellow } from '../../utilities';
-
 class Projects extends Component {
   componentDidMount() {
     const { getData } = this.props;
@@ -48,26 +46,14 @@ const mapDispatchToProps = dispatch => bindActionCreators({ getData }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);
 
 const Wrapper = styled.div`
-  height: calc(100vh - 60px);
+  height: 100vh;
   align-content: center;
-
-  & h2 {
-    color: ${props => props.theme.colors.secondary};
-    padding: 110px 0px 50px 50px;
-  }
-
-  & span {
-    color: ${yellow};
-    font-weight: 800;
-    font-size: 33px;
-    padding: 0 5px;
-  }
 `;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 1fr;
+  grid-template-rows: 100%;
   grid-column-gap: 20px;
   margin: 20px;
 `;

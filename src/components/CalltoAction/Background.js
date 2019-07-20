@@ -27,7 +27,7 @@ const Wrapper = styled(animated.div)`
   right: 0;
 
   & img {
-    width: 970px;
+    width: 52vw;
 
   ${below.xxl`
     width: 750px;

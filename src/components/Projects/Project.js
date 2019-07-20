@@ -1,3 +1,4 @@
+/* eslint react/jsx-no-target-blank: 0 */
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
@@ -28,8 +29,8 @@ const Project = (props) => {
       <img src={img} alt="Project Cover" />
       <h5>{description}</h5>
       <BtnWrapper>
-        <a href={githubUrl}>GitHub</a>
-        <a href={projectUrl}>Live</a>
+        <a href={githubUrl} target="_blank">GitHub</a>
+        <a href={projectUrl} target="_blank">Live</a>
       </BtnWrapper>
     </Wrapper>
   );

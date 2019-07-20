@@ -1,10 +1,9 @@
 /* eslint import/prefer-default-export: 0 */
 import styled from 'styled-components';
 
-import { lightBlue, below } from '../utilities';
+import { below } from '../utilities';
 
 export const Card = styled.div`
-  /* background-color: ${lightBlue}; */
   padding: 25px 20px;
   border-radius: 20px;
   background-color: ${props => props.theme.colors.primary};

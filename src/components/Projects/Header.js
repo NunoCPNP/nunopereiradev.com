@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
 import { Waypoint } from 'react-waypoint';
+
+import { yellow } from '../../utilities';
 
 const Header = () => {
   const [animation, toggleAnimation] = useState(false);
@@ -14,7 +17,7 @@ const Header = () => {
   return (
     <>
 
-      <animated.h2 style={firstAnimation}>
+      <Title style={firstAnimation}>
         <Waypoint
           bottomOffset="20%"
           onEnter={() => { if (!animation) toggleAnimation(true); }}
@@ -22,9 +25,21 @@ const Header = () => {
         Some of the latest
         <span> Projects </span>
         I have been working on
-      </animated.h2>
+      </Title>
     </>
   );
 };
 
 export default Header;
+
+const Title = styled(animated.h2)`
+  color: ${props => props.theme.colors.secondary};
+  padding: 110px 0px 40px 50px;
+
+  & span {
+    color: ${yellow};
+    font-weight: 800;
+    font-size: 33px;
+    padding: 0 5px;
+  }
+`;
