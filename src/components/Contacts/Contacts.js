@@ -4,7 +4,7 @@ import firebaseConf from './Firebase';
 
 import ContactText from './ContactText';
 
-import { darkBlue, yellow } from '../../utilities';
+import { darkBlue, yellow, below } from '../../utilities';
 
 class Contacts extends Component {
   state = {
@@ -96,6 +96,10 @@ const ContactsWrapper = styled.div`
   grid-template-columns: 50% 50%; 
   grid-template-rows: 50vh;
   padding: 50px;
+
+  ${below.xxl`
+    grid-template-rows: 70vh;
+  `}
 `;
 
 const StyledTitle = styled.h2`

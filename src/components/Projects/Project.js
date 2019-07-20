@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
 import { Waypoint } from 'react-waypoint';
 
-import { yellow, darkBlue } from '../../utilities';
+import { yellow, darkBlue, below } from '../../utilities';
 
 const Project = (props) => {
   const [first, toggleFirst] = useState(false);
@@ -46,6 +46,10 @@ const Wrapper = styled(animated.div)`
     text-align: center;
     font-size: 25px;
     padding-bottom: 20px;
+
+    ${below.xxl`
+      font-size: 22px;
+    `}
   }
 
   & img {
@@ -56,6 +60,10 @@ const Wrapper = styled(animated.div)`
     text-align: justify;
     font-size: 20px;
     padding: 10px;
+
+    ${below.xxl`
+      font-size: 18px;
+    `}
   }
 `;
 

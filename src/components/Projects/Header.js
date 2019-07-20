@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useSpring, animated, config } from 'react-spring';
 import { Waypoint } from 'react-waypoint';
 
-import { yellow } from '../../utilities';
+import { yellow, above } from '../../utilities';
 
 const Header = () => {
   const [animation, toggleAnimation] = useState(false);
@@ -35,6 +35,10 @@ export default Header;
 const Title = styled(animated.h2)`
   color: ${props => props.theme.colors.secondary};
   padding: 110px 0px 40px 50px;
+
+  ${above.xxl`
+    padding: 90px 0px 20px 50px; 
+  `}
 
   & span {
     color: ${yellow};
