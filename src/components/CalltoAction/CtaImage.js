@@ -26,7 +26,6 @@ const ImageWrapper = styled(animated.div)`
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   align-self: center;
-  justify-self: center;
 
   & img {
     padding-top: 120px;
@@ -36,6 +35,11 @@ const ImageWrapper = styled(animated.div)`
     ${below.xxl`
       width: 95%;
       padding-bottom: 50px;
+    `}
+
+    ${below.xl`
+      width: 90%;
+      padding-left: 50px;
     `}
   }
 `;

@@ -29,4 +29,8 @@ const Grid = styled.div`
   ${below.xxl`
     grid-template-rows: 100vh;
   `}
+
+  ${below.xl`
+    grid-template-rows: 800px;
+  `}
 `;

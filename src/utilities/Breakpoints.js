@@ -1,10 +1,10 @@
 import { css } from 'styled-components';
 
 const size = {
-  s: 576,
+  s: 575,
   m: 768,
-  l: 992,
-  xl: 1200,
+  l: 991,
+  xl: 1199,
   xxl: 1366,
 };
 
