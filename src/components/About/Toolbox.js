@@ -5,7 +5,7 @@ import { Waypoint } from 'react-waypoint';
 
 import tbImage from '../../assets/tools.png';
 
-import { yellow } from '../../utilities';
+import { yellow, below } from '../../utilities';
 
 const Toolbox = () => {
   const [first, toggleFirst] = useState(false);
@@ -56,6 +56,10 @@ const Grid = styled.div`
     width: 250px;
     padding-bottom: 40px;
     margin: auto;
+
+    ${below.extra`
+      width: 220px;
+    `}
   }
 `;
 
@@ -70,11 +74,19 @@ const Container = styled(animated.div)`
     justify-self: center;
     color: ${yellow};
     padding-bottom: 15px;
+
+    ${below.extra`
+      font-size: 22px;
+    `}
   }
 
   & h3 {
     color: ${props => props.theme.colors.secondary};
     justify-self: center;
     padding-top: 10px;
+
+    ${below.extra`
+      font-size: 18px;
+    `}
   }
 `;

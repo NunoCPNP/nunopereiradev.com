@@ -28,5 +28,13 @@ const Wrapper = styled(animated.div)`
 
   & img {
     width: 52vw;
+
+    ${below.xl`
+      width: 58vw;
+    `}
   }
+
+  ${below.extra`
+    width: 58vw;
+  `}  
 `;

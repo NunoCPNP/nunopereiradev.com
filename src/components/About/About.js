@@ -26,4 +26,8 @@ const Grid = styled.div`
     grid-template-columns: 70% 30%;
     grid-template-rows: 100vh;
   `}
+
+  ${below.extra`
+    grid-template-rows: 700px;
+  `}
 `;

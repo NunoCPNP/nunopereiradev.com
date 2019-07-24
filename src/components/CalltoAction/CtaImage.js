@@ -39,7 +39,12 @@ const ImageWrapper = styled(animated.div)`
 
     ${below.xl`
       width: 90%;
-      padding-left: 50px;
+      float: right;
+      padding-right: 20px;
+    `}
+
+    ${below.extra`
+      width: 88%;
     `}
   }
 `;

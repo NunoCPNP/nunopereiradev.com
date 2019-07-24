@@ -100,6 +100,11 @@ const ContactsWrapper = styled.div`
   ${below.xxl`
     grid-template-rows: 70vh;
   `}
+
+  ${below.extra`
+    grid-template-rows: 500px;
+    padding: 20px;
+  `}
 `;
 
 const StyledTitle = styled.h2`

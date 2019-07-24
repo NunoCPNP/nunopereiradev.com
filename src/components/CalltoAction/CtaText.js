@@ -60,4 +60,20 @@ const StyledLettering = styled(animated.div)`
   ${below.xxl`
     padding-top: 50px;
   `}
+
+  ${below.extra`
+    padding-left: 20px;
+
+    & h1 {
+      font-size: 60px;
+    }
+
+    & span {
+      font-size: 60px;
+    }
+
+    & h3 {
+      font-size: 27px;
+    }
+  `}
 `;

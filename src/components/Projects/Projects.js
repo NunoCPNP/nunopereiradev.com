@@ -7,6 +7,8 @@ import { bindActionCreators } from 'redux';
 import Project from './Project';
 import Header from './Header';
 
+import { below } from '../../utilities';
+
 import { getData } from '../../store/Sanity/actions';
 
 class Projects extends Component {
@@ -48,12 +50,20 @@ export default connect(mapStateToProps, mapDispatchToProps)(Projects);
 const Wrapper = styled.div`
   height: 100vh;
   align-content: center;
+
+  ${below.extra`
+    height: 700px;
+  `}
 `;
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 100%;
+  grid-template-rows: 1fr;
   grid-column-gap: 20px;
   margin: 20px;
+
+  ${below.extra`
+    grid-column-gap: 10px;
+  `}
 `;

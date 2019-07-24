@@ -3,8 +3,9 @@ import { css } from 'styled-components';
 const size = {
   s: 575,
   m: 768,
-  l: 991,
-  xl: 1199,
+  l: 992,
+  extra: 1024,
+  xl: 1200,
   xxl: 1366,
 };
 

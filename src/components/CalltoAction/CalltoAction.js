@@ -33,4 +33,8 @@ const Grid = styled.div`
   ${below.xl`
     grid-template-rows: 800px;
   `}
+
+  ${below.extra`
+    grid-template-rows: 600px;
+  `}
 `;

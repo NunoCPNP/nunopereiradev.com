@@ -50,6 +50,10 @@ const Wrapper = styled(animated.div)`
     ${below.xxl`
       font-size: 22px;
     `}
+
+    ${below.extra`
+      font-size: 20px;
+    `}
   }
 
   & img {
@@ -63,6 +67,10 @@ const Wrapper = styled(animated.div)`
 
     ${below.xxl`
       font-size: 18px;
+    `}
+
+    ${below.extra`
+      font-size: 15px;
     `}
   }
 `;

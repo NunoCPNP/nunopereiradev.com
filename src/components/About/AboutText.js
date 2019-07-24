@@ -101,6 +101,10 @@ const Wrapper = styled.div`
       line-height: 3rem;
     }
   `}
+
+  ${below.extra`
+    padding: 50px 20px;
+  `}
 `;
 
 const SubHeader = styled.div`
@@ -131,6 +135,10 @@ const AboutCard = styled(Card)`
     color: ${yellow};
     font-size: 30px;
     font-weight: 800;
+
+    ${below.extra`
+      font-size: 25px;
+    `}
   }
 
   & h4 {
