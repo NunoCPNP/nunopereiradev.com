@@ -61,6 +61,11 @@ const Grid = styled.div`
       width: 220px;
     `}
   }
+
+  ${below.m`
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  `}
 `;
 
 const Container = styled(animated.div)`

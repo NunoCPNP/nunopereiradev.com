@@ -30,4 +30,9 @@ const Grid = styled.div`
   ${below.extra`
     grid-template-rows: 700px;
   `}
+
+  ${below.m`
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+  `}
 `;

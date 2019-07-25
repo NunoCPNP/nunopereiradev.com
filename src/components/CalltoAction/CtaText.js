@@ -76,4 +76,22 @@ const StyledLettering = styled(animated.div)`
       font-size: 27px;
     }
   `}
+
+  ${below.m`
+    & h1 {
+      font-size: 50px;
+    }
+
+    & span {
+      font-size: 50px;
+    }
+
+    & h3 {
+      font-size: 22px;
+    }
+
+    & h4 {
+      font-size: 20;
+    }
+  `}
 `;

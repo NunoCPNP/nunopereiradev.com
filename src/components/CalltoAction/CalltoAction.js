@@ -37,4 +37,8 @@ const Grid = styled.div`
   ${below.extra`
     grid-template-rows: 600px;
   `}
+
+${below.m`
+    grid-template-rows: 450px;
+  `}
 `;

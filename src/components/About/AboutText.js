@@ -105,6 +105,11 @@ const Wrapper = styled.div`
   ${below.extra`
     padding: 50px 20px;
   `}
+
+  ${below.m`
+    grid-columns: 1 / 2;
+    padding: 20px;
+  `}
 `;
 
 const SubHeader = styled.div`
