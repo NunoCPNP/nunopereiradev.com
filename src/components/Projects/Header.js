@@ -44,6 +44,10 @@ const Title = styled(animated.h2)`
     padding: 90px 0px 20px 20px; 
   `}
 
+  ${below.m`
+    padding: 20px 0px 30px 20px;
+  `}
+
   & span {
     color: ${yellow};
     font-weight: 800;

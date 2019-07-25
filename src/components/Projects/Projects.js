@@ -66,4 +66,10 @@ const Grid = styled.div`
   ${below.extra`
     grid-column-gap: 10px;
   `}
+
+  ${below.m`
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+  `}
 `;

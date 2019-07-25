@@ -60,6 +60,10 @@ const Grid = styled.div`
     ${below.extra`
       width: 220px;
     `}
+
+    ${below.m`
+      display: none;
+    `}
   }
 
   ${below.m`
@@ -94,4 +98,15 @@ const Container = styled(animated.div)`
       font-size: 18px;
     `}
   }
+
+  ${below.m`
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 50px 0px;
+
+    & h2 {
+      grid-column: 1 / 6;
+      grid-row 1 / 2;
+    }
+  `}
 `;

@@ -123,6 +123,12 @@ const SubGrid = styled(animated.div)`
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
 
+  ${below.m`
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+  `}
+
   & h2 {
     grid-column: 1 / 5;
     grid-row: 1 / 2;

@@ -33,6 +33,6 @@ const Grid = styled.div`
 
   ${below.m`
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
   `}
 `;
