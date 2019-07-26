@@ -105,6 +105,11 @@ const ContactsWrapper = styled.div`
     grid-template-rows: 500px;
     padding: 20px;
   `}
+
+  ${below.m`
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  `}
 `;
 
 const StyledTitle = styled.h2`
@@ -119,7 +124,7 @@ const StyledTitle = styled.h2`
 `;
 
 const FormWrapper = styled.div`
-  grid-row: 1, 2;
+  grid-row: 1 / 2;
   align-self: center;
 
   & input {
@@ -159,6 +164,11 @@ const FormWrapper = styled.div`
     background-color: ${yellow};
     border: 1px solid ${yellow};
   }
+
+  ${below.m`
+    grid-columns: 1 / 2;
+    grid-row: 2 / 3;
+  `}
 `;
 
 const StyledDiv = styled.div`

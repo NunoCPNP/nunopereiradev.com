@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { yellow } from '../../utilities';
+import { yellow, below } from '../../utilities';
 
 const ContactText = () => (
   <Grid>
@@ -46,6 +46,12 @@ const Grid = styled.div`
   & span {
     color: ${yellow};
   }
+
+  ${below.m`
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: 20px;
+  `}
 `;
 
 const Spacer = styled.div`
