@@ -63,7 +63,7 @@ class Contacts extends Component {
                 <input autoComplete= "off" type="text" id="name" placeholder="Your Name" ref={name => this.inputName = name}/>
               </StyledDiv>
               <StyledDiv>
-                <label htmlFor='exampleInputEmail1'>Email :</label>
+                <label htmlFor='email'>Email :</label>
                 <input autoComplete= "off" type='email' id='email' placeholder='Your Email Adress' ref={email => this.inputEmail = email} />
               </StyledDiv>
               <StyledDiv>
@@ -79,7 +79,7 @@ class Contacts extends Component {
                   {this.state.alertData.message}
                 </StyledAlert>
               </div>}
-              {!this.state.alert && <button type='submit'>Send</button>}
+              {!this.state.alert && <button type='submit' aria-label="submit">Send</button>}
             </form >
           </FormWrapper>
           <ContactText />

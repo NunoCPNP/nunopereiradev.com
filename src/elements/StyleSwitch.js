@@ -11,6 +11,7 @@ const StyleSwitch = ({ toggleDarkmode, darkmode, getData }) => (
     className={darkmode ? 'bulb' : 'bulb off'}
     onClick={toggleDarkmode}
     role="button"
+    aria-label="Switch Theme"
   >
     <svg width="32px" height="30px" viewBox="0 0 32 30">
       <path d="M11.8037382,22 C10.7546727,20.5 9.59626432,18.5830845 9.1810745,17 C8.13200903,13 11.8037382,9 16,9 C20.1962618,9 23.867991,13 22.8189255,17 C22.147873,19.5586678 20.6802136,21.077366 20.1962618,22" />
