@@ -109,4 +109,15 @@ const Container = styled(animated.div)`
       grid-row 1 / 2;
     }
   `}
+
+  ${below.s`
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 50px 0px;
+
+    & h2 {
+      grid-column: 1 / 5;
+      grid-row 1 / 2;
+    }
+  `}
 `;

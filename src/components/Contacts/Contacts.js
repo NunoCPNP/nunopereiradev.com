@@ -110,6 +110,10 @@ const ContactsWrapper = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   `}
+
+  ${below.s`
+    padding: 20px;
+  `}
 `;
 
 const StyledTitle = styled.h2`

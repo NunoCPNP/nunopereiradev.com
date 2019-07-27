@@ -46,5 +46,10 @@ const ImageWrapper = styled(animated.div)`
     ${below.extra`
       width: 88%;
     `}
+
+    ${below.s`
+      padding-top: 70px;
+      width: 100%;
+    `}
   }
 `;

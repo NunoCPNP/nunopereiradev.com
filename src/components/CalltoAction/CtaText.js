@@ -47,7 +47,7 @@ const StyledLettering = styled(animated.div)`
     color: ${yellow};
   }
   & h3 {
-    margin-top:35px;
+    margin-top: 35px;
     font-size: 32px;
     font-weight: 700;
     color: ${props => props.theme.colors.secondary};
@@ -91,7 +91,26 @@ const StyledLettering = styled(animated.div)`
     }
 
     & h4 {
-      font-size: 20;
+      font-size: 20px;
+    }
+  `}
+
+  ${below.s`
+    & h1 {
+      font-size: 40px;
+    }
+
+    & span {
+      font-size: 40px;
+    }
+
+    & h3 {
+      font-size: 20px;
+      margin-top: 15px;
+    }
+
+    & h4 {
+      font-size: 14px;
     }
   `}
 `;

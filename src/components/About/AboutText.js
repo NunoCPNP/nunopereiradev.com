@@ -110,6 +110,18 @@ const Wrapper = styled.div`
     grid-columns: 1 / 2;
     padding: 20px;
   `}
+
+  ${below.s`
+    padding: 20px;
+
+    & h2 {
+      font-size: 20px;
+    }
+
+    & span {
+      font-size: 23px;
+    }
+  `}
 `;
 
 const SubHeader = styled.div`
@@ -149,6 +161,10 @@ const AboutCard = styled(Card)`
 
     ${below.extra`
       font-size: 25px;
+    `}
+
+    ${below.s`
+      font-size: 22px;
     `}
   }
 

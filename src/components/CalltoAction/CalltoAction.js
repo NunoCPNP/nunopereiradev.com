@@ -38,7 +38,11 @@ const Grid = styled.div`
     grid-template-rows: 600px;
   `}
 
-${below.m`
+  ${below.m`
     grid-template-rows: 450px;
+  `}
+
+  ${below.s`
+    grid-template-rows: 400px;
   `}
 `;

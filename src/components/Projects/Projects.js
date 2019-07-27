@@ -72,4 +72,9 @@ const Grid = styled.div`
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 20px;
   `}
+
+  ${below.s`
+    margin: 10px;
+    grid-column-gap: 10px;
+  `}
 `;

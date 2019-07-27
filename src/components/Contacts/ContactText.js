@@ -52,6 +52,10 @@ const Grid = styled.div`
     grid-row: 1 / 2;
     padding: 20px;
   `}
+
+  ${below.s`
+    padding: 10px;
+  `}
 `;
 
 const Spacer = styled.div`
