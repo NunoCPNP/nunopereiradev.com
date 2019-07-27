@@ -36,5 +36,10 @@ const Wrapper = styled(animated.div)`
 
   ${below.extra`
     width: 58vw;
+  `}
+
+  ${below.xs`
+    padding-top: 25px;
+    width: 58vw;
   `}  
 `;

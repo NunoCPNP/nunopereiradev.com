@@ -113,4 +113,25 @@ const StyledLettering = styled(animated.div)`
       font-size: 14px;
     }
   `}
+
+  ${below.xl`
+    padding-left: 5px;
+
+    & h1 {
+      font-size: 28px;
+    }
+
+    & span {
+      font-size: 32px;
+    }
+
+    & h3 {
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    & h4 {
+      font-size: 10px;
+    }
+  `}
 `;

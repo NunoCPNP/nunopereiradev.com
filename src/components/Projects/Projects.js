@@ -77,4 +77,9 @@ const Grid = styled.div`
     margin: 10px;
     grid-column-gap: 10px;
   `}
+
+${below.xs`
+    margin: 5px;
+    grid-column-gap: 5px;
+  `}
 `;

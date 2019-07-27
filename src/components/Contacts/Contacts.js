@@ -114,6 +114,10 @@ const ContactsWrapper = styled.div`
   ${below.s`
     padding: 20px;
   `}
+
+  ${below.xs`
+    padding: 5px;
+  `}
 `;
 
 const StyledTitle = styled.h2`

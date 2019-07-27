@@ -45,4 +45,8 @@ const Grid = styled.div`
   ${below.s`
     grid-template-rows: 400px;
   `}
+
+${below.xs`
+    grid-template-rows: 300px;
+  `}
 `;

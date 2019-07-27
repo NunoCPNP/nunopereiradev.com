@@ -122,10 +122,22 @@ const Wrapper = styled.div`
       font-size: 23px;
     }
   `}
+
+  ${below.xs`
+    padding: 5px;
+
+    & h2 {
+      line-height: 2.5rem;
+    }
+  `}
 `;
 
 const SubHeader = styled.div`
   padding-top: 50px;
+
+  ${below.xs`
+    padding-top: 30px;
+  `}
 `;
 
 const SubGrid = styled(animated.div)`

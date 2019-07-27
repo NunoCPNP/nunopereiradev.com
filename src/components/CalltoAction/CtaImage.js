@@ -51,5 +51,9 @@ const ImageWrapper = styled(animated.div)`
       padding-top: 70px;
       width: 100%;
     `}
+
+    ${below.s`
+      padding-top: 65px;
+    `}
   }
 `;
