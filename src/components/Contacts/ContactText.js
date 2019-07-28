@@ -56,6 +56,14 @@ const Grid = styled.div`
   ${below.s`
     padding: 10px;
   `}
+
+  ${below.xxs`
+    padding: 10px;
+
+    & h2 {
+      font-size: 18px;
+    }
+  `}
 `;
 
 const Spacer = styled.div`

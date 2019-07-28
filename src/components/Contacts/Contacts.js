@@ -129,6 +129,14 @@ const StyledTitle = styled.h2`
     font-weight: 800;
     font-size: 30px;
   }
+
+  ${below.xxs`
+    font-size: 20px;
+
+    & span {
+      font-size: 24px;
+    }
+  `}
 `;
 
 const FormWrapper = styled.div`

@@ -65,5 +65,9 @@ const Title = styled(animated.h2)`
     ${below.s`
       font-size: 28px;
     `}
+
+    ${below.xxs`
+      font-size: 22px;
+    `}
   }
 `;

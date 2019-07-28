@@ -54,6 +54,10 @@ const Wrapper = styled.div`
   ${below.extra`
     height: 700px;
   `}
+
+  ${below.xxs`
+    height: auto;
+  `}
 `;
 
 const Grid = styled.div`
@@ -78,8 +82,15 @@ const Grid = styled.div`
     grid-column-gap: 10px;
   `}
 
-${below.xs`
+  ${below.xs`
     margin: 5px;
     grid-column-gap: 5px;
+  `}
+
+  ${below.xxs`
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 20px;
+    margin: 10px;
   `}
 `;

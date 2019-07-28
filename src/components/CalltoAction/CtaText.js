@@ -114,7 +114,7 @@ const StyledLettering = styled(animated.div)`
     }
   `}
 
-  ${below.xl`
+  ${below.xs`
     padding-left: 5px;
 
     & h1 {
@@ -123,6 +123,27 @@ const StyledLettering = styled(animated.div)`
 
     & span {
       font-size: 32px;
+    }
+
+    & h3 {
+      font-size: 15px;
+      margin-top: 5px;
+    }
+
+    & h4 {
+      font-size: 10px;
+    }
+  `}
+
+  ${below.xxs`
+    padding-left: 5px;
+
+    & h1 {
+      font-size: 22px;
+    }
+
+    & span {
+      font-size: 25px;
     }
 
     & h3 {

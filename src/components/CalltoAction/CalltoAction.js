@@ -46,7 +46,11 @@ const Grid = styled.div`
     grid-template-rows: 400px;
   `}
 
-${below.xs`
+  ${below.xs`
     grid-template-rows: 300px;
+  `}
+
+  ${below.xxs`
+    grid-template-rows: 270px;
   `}
 `;

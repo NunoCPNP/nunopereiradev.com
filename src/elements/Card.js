@@ -12,4 +12,8 @@ export const Card = styled.div`
   ${below.xxl`
     padding: 25px 10px;
   `}
+
+  ${below.xs`
+    padding: 25px 8px;
+  `}
 `;

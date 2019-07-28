@@ -120,4 +120,15 @@ const Container = styled(animated.div)`
       grid-row 1 / 2;
     }
   `}
+
+  ${below.s`
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 30px 0px;
+
+    & h2 {
+      grid-column: 1 / 4;
+      grid-row 1 / 2;
+    }
+  `}
 `;

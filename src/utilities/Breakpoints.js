@@ -1,6 +1,7 @@
 import { css } from 'styled-components';
 
 const size = {
+  xxs: 375,
   xs: 415,
   s: 576,
   m: 769,

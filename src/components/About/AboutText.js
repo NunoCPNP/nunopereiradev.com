@@ -138,6 +138,11 @@ const SubHeader = styled.div`
   ${below.xs`
     padding-top: 30px;
   `}
+
+  ${below.xs`
+    padding-top: 30px;
+    font-size: 20px;
+  `}
 `;
 
 const SubGrid = styled(animated.div)`
@@ -150,6 +155,18 @@ const SubGrid = styled(animated.div)`
   ${below.m`
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+  `}
+
+  ${below.xs`
+    grid-template-columns: 48% 48%;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+  `}
+
+  ${below.xxs`
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 1fr);
     grid-row-gap: 10px;
   `}
 
@@ -177,6 +194,10 @@ const AboutCard = styled(Card)`
 
     ${below.s`
       font-size: 22px;
+    `}
+
+    ${below.xxs`
+      font-size: 20px;
     `}
   }
 
