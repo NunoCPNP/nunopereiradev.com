@@ -55,6 +55,10 @@ const Wrapper = styled.div`
     height: 700px;
   `}
 
+  ${below.m`
+    height: auto;
+  `}
+
   ${below.xxs`
     height: auto;
   `}

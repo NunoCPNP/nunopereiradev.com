@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
@@ -27,7 +28,9 @@ function App() {
           <title>Nuno Pereira - Front End Developer</title>
           <meta name="description" content="Nuno Pereira Front End Developer Portfolio" />
         </Helmet>
-        <HomePage />
+        <Wrapper>
+          <HomePage />
+        </Wrapper>
       </Provider>
       <GlobalStyle />
     </>
@@ -35,3 +38,7 @@ function App() {
 }
 
 export default App;
+
+const Wrapper = styled.div`
+  max-width: 1980px;
+`;

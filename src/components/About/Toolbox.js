@@ -34,11 +34,13 @@ const Toolbox = () => {
         <h3>HTML5</h3>
         <h3>CSS3</h3>
         <h3>JavaScript</h3>
+        <h3>SASS</h3>
         <h3>ReactJS</h3>
         <h3>Redux</h3>
         <h3>Gatsby</h3>
         <h3>GraphQL</h3>
         <h3>Firebase</h3>
+        <h3>Bootstrap</h3>
       </Container>
     </Grid>
   );
