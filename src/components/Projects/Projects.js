@@ -66,7 +66,7 @@ const Wrapper = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
   margin: 20px;
@@ -76,8 +76,8 @@ const Grid = styled.div`
   `}
 
   ${below.m`
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 20px;
   `}
 
@@ -92,8 +92,8 @@ const Grid = styled.div`
   `}
 
   ${below.xxs`
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 20px;
     margin: 10px;
   `}
